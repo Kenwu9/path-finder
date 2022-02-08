@@ -1,4 +1,3 @@
-from pickle import TRUE
 import pygame as p
 import math
 from queue import PriorityQueue
@@ -35,25 +34,25 @@ class square:
 
     def is_barrier(self, color):
         if color == BLACK:
-            return TRUE
+            return True
         return False
 
     def grid(row, col, width):
         pass
 
-    def update_neighbors(self, grid):
-	    self.neighbors = []
-        if self.row < ROWS - 1 and not grid[self.row + 1][self.col].is_barrier(): # DOWN
-	        self.neighbors.append(grid[self.row + 1][self.col])
+    # def update_neighbors(self, grid):
+	#     self.neighbors = []
+    #     if self.row < ROWS - 1 and not grid[self.row + 1][self.col].is_barrier(): # DOWN
+	#         self.neighbors.append(grid[self.row + 1][self.col])
 
-	    if self.row > 0 and not grid[self.row - 1][self.col].is_barrier(): # UP
-	        self.neighbors.append(grid[self.row - 1][self.col])
+	#     if self.row > 0 and not grid[self.row - 1][self.col].is_barrier(): # UP
+	#         self.neighbors.append(grid[self.row - 1][self.col])
 
-	    if self.col < ROWS - 1 and not grid[self.row][self.col + 1].is_barrier(): # RIGHT
-	        self.neighbors.append(grid[self.row][self.col + 1])
+	#     if self.col < ROWS - 1 and not grid[self.row][self.col + 1].is_barrier(): # RIGHT
+	#         self.neighbors.append(grid[self.row][self.col + 1])
 
-	    if self.col > 0 and not grid[self.row][self.col - 1].is_barrier(): # LEFT
-	        self.neighbors.append(grid[self.row][self.col - 1])
+	#     if self.col > 0 and not grid[self.row][self.col - 1].is_barrier(): # LEFT
+	#         self.neighbors.append(grid[self.row][self.col - 1])
 
 # def make_grid(rows, width):
 # # from astar.py. need to change
